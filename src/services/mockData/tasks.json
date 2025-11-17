@@ -1,0 +1,98 @@
+[
+  {
+    "Id": 1,
+    "title": "Review quarterly report",
+    "description": "Go through Q3 financial reports and prepare summary for board meeting",
+    "priority": "high",
+    "dueDate": "2024-01-15",
+    "listId": "work",
+    "completed": false,
+    "createdAt": "2024-01-10T08:00:00Z",
+    "completedAt": null,
+    "order": 1
+  },
+  {
+    "Id": 2,
+    "title": "Schedule dentist appointment",
+    "description": "Book cleaning appointment for next month",
+    "priority": "medium",
+    "dueDate": "2024-01-20",
+    "listId": "personal",
+    "completed": false,
+    "createdAt": "2024-01-10T09:15:00Z",
+    "completedAt": null,
+    "order": 2
+  },
+  {
+    "Id": 3,
+    "title": "Buy groceries",
+    "description": "Milk, eggs, bread, vegetables for the week",
+    "priority": "medium",
+    "dueDate": "2024-01-12",
+    "listId": "shopping",
+    "completed": false,
+    "createdAt": "2024-01-11T07:30:00Z",
+    "completedAt": null,
+    "order": 1
+  },
+  {
+    "Id": 4,
+    "title": "Complete project proposal",
+    "description": "Finish the client proposal for the new web development project",
+    "priority": "high",
+    "dueDate": "2024-01-14",
+    "listId": "work",
+    "completed": true,
+    "createdAt": "2024-01-08T10:00:00Z",
+    "completedAt": "2024-01-12T16:30:00Z",
+    "order": 2
+  },
+  {
+    "Id": 5,
+    "title": "Call mom",
+    "description": "Weekly catch-up call with mom",
+    "priority": "low",
+    "dueDate": "2024-01-13",
+    "listId": "personal",
+    "completed": true,
+    "createdAt": "2024-01-09T12:00:00Z",
+    "completedAt": "2024-01-13T19:00:00Z",
+    "order": 3
+  },
+  {
+    "Id": 6,
+    "title": "Update portfolio website",
+    "description": "Add recent projects and update skills section",
+    "priority": "low",
+    "dueDate": "2024-01-25",
+    "listId": "work",
+    "completed": false,
+    "createdAt": "2024-01-11T14:20:00Z",
+    "completedAt": null,
+    "order": 3
+  },
+  {
+    "Id": 7,
+    "title": "Plan weekend trip",
+    "description": "Research destinations and book accommodation for weekend getaway",
+    "priority": "low",
+    "dueDate": "2024-01-18",
+    "listId": "personal",
+    "completed": false,
+    "createdAt": "2024-01-11T16:45:00Z",
+    "completedAt": null,
+    "order": 4
+  },
+  {
+    "Id": 8,
+    "title": "Team meeting preparation",
+    "description": "Prepare slides and agenda for weekly team sync",
+    "priority": "medium",
+    "dueDate": "2024-01-16",
+    "listId": "work",
+    "completed": false,
+    "createdAt": "2024-01-12T11:00:00Z",
+    "completedAt": null,
+    "order": 4
+  }
+]

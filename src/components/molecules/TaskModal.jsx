@@ -87,12 +87,12 @@ const TaskModal = ({
         />
 
         {/* Modal */}
-        <motion.div
+<motion.div
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 20 }}
           transition={{ type: "spring", damping: 25, stiffness: 300 }}
-          className="relative w-full max-w-lg bg-surface rounded-2xl shadow-2xl border border-gray-200 z-10"
+          className="relative w-full max-w-lg mx-4 my-8 bg-surface rounded-2xl shadow-2xl border border-gray-200 z-10 max-h-[90vh] flex flex-col"
           onKeyDown={handleKeyDown}
         >
           {/* Header */}
@@ -115,60 +115,62 @@ const TaskModal = ({
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="p-6 space-y-6">
-            <Input
-              label="Task Title"
-              value={formData.title}
-              onChange={(e) => handleChange("title", e.target.value)}
-              placeholder="What needs to be done?"
-              required
-              autoFocus
-              disabled={isSubmitting}
-            />
-
-            <Textarea
-              label="Description"
-              value={formData.description}
-              onChange={(e) => handleChange("description", e.target.value)}
-              placeholder="Add more details about this task..."
-              rows={3}
-              disabled={isSubmitting}
-            />
-
-            <div className="grid grid-cols-2 gap-4">
-              <Select
-                label="Priority"
-                value={formData.priority}
-                onChange={(e) => handleChange("priority", e.target.value)}
-                disabled={isSubmitting}
-              >
-                <option value="low">Low Priority</option>
-                <option value="medium">Medium Priority</option>
-                <option value="high">High Priority</option>
-              </Select>
-
+<form onSubmit={handleSubmit} className="flex-1 flex flex-col overflow-hidden">
+            <div className="flex-1 overflow-y-auto px-6 pt-6 pb-2 space-y-6">
               <Input
-                label="Due Date"
-                type="date"
-                value={formData.dueDate}
-                onChange={(e) => handleChange("dueDate", e.target.value)}
+                label="Task Title"
+                value={formData.title}
+                onChange={(e) => handleChange("title", e.target.value)}
+                placeholder="What needs to be done?"
+                required
+                autoFocus
                 disabled={isSubmitting}
               />
+
+              <Textarea
+                label="Description"
+                value={formData.description}
+                onChange={(e) => handleChange("description", e.target.value)}
+                placeholder="Add more details about this task..."
+                rows={3}
+                disabled={isSubmitting}
+              />
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <Select
+                  label="Priority"
+                  value={formData.priority}
+                  onChange={(e) => handleChange("priority", e.target.value)}
+                  disabled={isSubmitting}
+                >
+                  <option value="low">Low Priority</option>
+                  <option value="medium">Medium Priority</option>
+                  <option value="high">High Priority</option>
+                </Select>
+
+                <Input
+                  label="Due Date"
+                  type="date"
+                  value={formData.dueDate}
+                  onChange={(e) => handleChange("dueDate", e.target.value)}
+                  disabled={isSubmitting}
+                />
+              </div>
+
+              <Select
+                label="List"
+                value={formData.listId}
+                onChange={(e) => handleChange("listId", e.target.value)}
+                disabled={isSubmitting}
+              >
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="shopping">Shopping</option>
+              </Select>
             </div>
 
-            <Select
-              label="List"
-              value={formData.listId}
-              onChange={(e) => handleChange("listId", e.target.value)}
-              disabled={isSubmitting}
-            >
-              <option value="work">Work</option>
-              <option value="personal">Personal</option>
-              <option value="shopping">Shopping</option>
-            </Select>
-
             {/* Actions */}
-            <div className="flex items-center justify-end space-x-3 pt-4 border-t border-gray-200">
+            <div className="flex-shrink-0 flex items-center justify-end space-x-3 px-6 py-4 border-t border-gray-200 bg-gray-50 rounded-b-2xl">
               <Button
                 type="button"
                 variant="secondary"
